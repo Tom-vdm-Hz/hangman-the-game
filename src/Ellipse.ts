@@ -13,20 +13,20 @@ class Ellipse {
      * The x-axis (horizontal) coordinate of the ellipse's center.
      */
     public x: number;
- 
-    
+
+
     /**
      * The y-axis (vertical) coordinate of the ellipse's center.
      */
     public y: number;
-   
-    
+
+
     /**
      * The ellipse's major-axis radius. Must be non-negative.
      */
     public radiusX: number;
-   
-    
+
+
     /**
      * The ellipse's minor-axis radius. Must be non-negative.
      */
@@ -37,7 +37,7 @@ class Ellipse {
      * The rotation of the ellipse, expressed in radians. Default is 0.
      */
     public rotation: number = 0;
-    
+
 
     /**
      * The angle at which the ellipse starts, measured clockwise from the 
@@ -122,7 +122,7 @@ class Ellipse {
     public drawCircle(ctx: CanvasRenderingContext2D) {
         ctx.save();
         ctx.beginPath();
-        ctx.rect(this.x, this.y, this.radiusX, this.radiusY);
+        ctx.arc(this.x, this.y, this.radiusX, this.startAngle, this.endAngle);
         if (this.fill) {
             ctx.fillStyle = this.fillStyle;
             ctx.fill();

@@ -13,20 +13,20 @@ class Rectangle {
      * The x-axis coordinate of the rectangle's starting point.
      */
     public x: number;
-    
+
 
     /**
      * The y-axis coordinate of the rectangle's starting point.
      */
     public y: number;
-    
+
 
     /**
      * The rectangle's width. Positive values are to the right, and negative
      * to the left.
      */
     public width: number;
-    
+
 
     /**
      * The rectangle's height. Positive values are down, and negative are up.
@@ -83,7 +83,7 @@ class Rectangle {
         this.height = height;
     }
 
-    
+
     /**
      * Draws the current rectangle with the current settings to the specified
      * CanvasRenderingContext2D.
@@ -95,7 +95,6 @@ class Rectangle {
         ctx.beginPath();
         ctx.rect(this.x, this.y, this.width, this.height);
         if (this.fill) {
-            console.log(this.fillStyle);
             ctx.fillStyle = this.fillStyle;
             ctx.fill();
         } else {
